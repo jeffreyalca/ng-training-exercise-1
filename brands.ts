@@ -1,4 +1,4 @@
-let brands = [
+export const brands = [
     {
       "id": 38,
       "name": "BLOOM"

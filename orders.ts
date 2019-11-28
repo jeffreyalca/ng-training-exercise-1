@@ -1,4 +1,4 @@
-let orders = [
+export const orders = [
     {
       "orderNumber":"FR10RJB6",
       "orderDate":"2019-10-21T12:07:43",

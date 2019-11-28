@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var search_service_1 = require("./search-service");
+var filter_behavior_1 = require("./filter-behavior");
+var brands_1 = require("./brands");
+var orders_1 = require("./orders");
+var brandSearchService = new search_service_1.SearchService();
+var brandFilter = new filter_behavior_1.BrandFilter();
+brandSearchService.setFilterBehavior(brandFilter);
+var filteredBrands = brandSearchService.executeSearch(brands_1.brands, 'OAKLEY');
+console.log(filteredBrands);
+var orderFilter = new filter_behavior_1.OrderFilter();
+brandSearchService.setFilterBehavior(orderFilter);
+var filteredOrders = brandSearchService.executeSearch(orders_1.orders, 'FR10RIG7');
+filteredOrders.push(brandSearchService.executeSearch(orders_1.orders, '99010253136980'));
+console.log(filteredOrders);

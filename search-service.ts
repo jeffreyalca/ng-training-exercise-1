@@ -7,8 +7,8 @@ export class SearchService {
         this._filterBehavior = filterBehavior;
     }
 
-    public executeSearch(dataToFilter: Array<any>): Array<any> {
-        let newValues = this._filterBehavior.applyFilter(dataToFilter);
+    public executeSearch(dataToFilter: Array<any>, searchTerm): Array<any> {
+        let newValues = this._filterBehavior.applyFilter(dataToFilter, searchTerm);
 
         return newValues;
     }
